@@ -3,25 +3,19 @@ package com.cg.dao;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-
-public class JPAUtil 
+public class JPAUtil
 {
-	private static EntityManagerFactory factory;
-	private static EntityManager em;
-	//Static block
-	
-	static
-	{
-		factory=Persistence.createEntityManagerFactory("JPA-PU");
-	}
-	
-	public static EntityManager getEntityManager()
-	{
-		if(em==null || !em.isOpen())
-		{
-			em=factory.createEntityManager();
-		}
-		return em;
-	}
-	
+private static EntityManagerFactory factory;
+private static EntityManager entityManager;
+static
+{
+factory = Persistence.createEntityManagerFactory("JPA-PU");
+}
+public static EntityManager getEntityManager()
+{
+if(entityManager==null || !entityManager.isOpen()) {
+entityManager = factory.createEntityManager();
+}
+return entityManager;
+}
 }

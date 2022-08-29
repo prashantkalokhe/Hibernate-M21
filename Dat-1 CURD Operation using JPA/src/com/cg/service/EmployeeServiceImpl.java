@@ -2,20 +2,19 @@ package com.cg.service;
 
 import com.cg.dao.EmployeeDao;
 import com.cg.dao.EmployeeDaoImpl;
-import com.cg.entities.Employee;
+import com.cg.entities.Employee1;
 
-public class EmployeeServiceImpl implements EmployeeService
-{
+public class EmployeeServiceImpl implements EmployeeService{
+
 	private EmployeeDao dao;
 	
-
 	public EmployeeServiceImpl() {
 		super();
 		dao=new EmployeeDaoImpl();
 	}
 
 	@Override
-	public void addEmployee(Employee emp) {
+	public void addEmployee(Employee1 emp) {
 		dao.beginTransaction();
 		dao.addEmployee(emp);
 		dao.commitTransaction();
@@ -23,22 +22,23 @@ public class EmployeeServiceImpl implements EmployeeService
 	}
 
 	@Override
-	public void updateEmployee(Employee emp) {
+	public void updateEmployee(Employee1 emp) {
 		dao.beginTransaction();
 		dao.updateEmployee(emp);
 		dao.commitTransaction();
+		
 	}
 
 	@Override
-	public Employee getEmployeeById(int ID) {
-		Employee emp=dao.getEmployeeById(ID);
+	public Employee1 updateEmployeeByID(int ID) {
+		Employee1 emp = dao.updateEmployeeByID(ID);
 		return emp;
 	}
 
 	@Override
-	public void removeEmployee(Employee emp) {
-		dao.beginTransaction();
-		dao.removeEmployee(emp);
-		dao.commitTransaction();
+	public void removeEmployee(Employee1 emp) {
+		// TODO Auto-generated method stub
+		
 	}
+
 }

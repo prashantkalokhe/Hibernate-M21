@@ -1,17 +1,14 @@
 package com.cg.dao;
 
-import com.cg.entities.Employee;
+import com.cg.entities.Employee1;
 
 public interface EmployeeDao 
 {
-	//by default all the methods are abstract in the interface
-	void addEmployee(Employee emp); //Creation
-	void updateEmployee(Employee emp); //Updation
-	Employee getEmployeeById(int ID); //Retrieve
-	void removeEmployee(Employee emp); //Delete/Remove
-	
-	void commitTransaction(); // close an entity manager
-	void beginTransaction(); //begin the operation of entity Manager
-	
+void addEmployee(Employee1 emp);
+void updateEmployee(Employee1 emp);
+Employee1 updateEmployeeByID(int ID);
+void removeEmployee(Employee1 emp);
 
+public abstract void commitTransaction();
+public abstract void beginTransaction();
 }

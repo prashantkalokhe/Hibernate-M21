@@ -1,13 +1,13 @@
 package com.cg.service;
 
-import com.cg.entities.Employee;
+import com.cg.entities.Employee1;
 
 public interface EmployeeService 
 {
-	//by default all the method are abstract in the Interface
-	void addEmployee(Employee emp); //Creation
-	void updateEmployee(Employee emp); //updation
-	Employee getEmployeeById(int ID); //Retrieve
-	void removeEmployee(Employee emp); //Delete/Remove
+
+	void addEmployee(Employee1 emp);
+	void updateEmployee(Employee1 emp);
+    Employee1 updateEmployeeByID(int ID);
+    void removeEmployee(Employee1 emp);
 
 }
