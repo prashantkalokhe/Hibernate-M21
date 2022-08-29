@@ -2,51 +2,57 @@ package com.cg.dao;
 
 import javax.persistence.EntityManager;
 
-import com.cg.entities.Employee1;
+import com.cg.entities.Employee;
 
-public class EmployeeDaoImpl implements EmployeeDao{
-
-	private EntityManager entityManager;
+public class EmployeeDaoImpl implements EmployeeDao
+{
+	//We are going to use EntityManager method =CRUD
+	private EntityManager em;
 	
+	//default constructor
 	public EmployeeDaoImpl() {
 		super();
-		entityManager=JPAUtil.getEntityManager();
+		em=JPAUtil.getEntityManager();
 	}
 
 	@Override
-	public void addEmployee(Employee1 emp) {
-		entityManager.persist(emp);
+	
+	//to add => persist(objname);
+	public void addEmployee(Employee emp) 
+	{
+		em.persist(emp);
+	}
+
+	@Override
+	//to update => merge(objname);
+	public void updateEmployee(Employee emp) {
+		em.merge(emp);
+	}
+
+	@Override
+	//To reteive a data => find(classname,pk);
+	public Employee getEmployeeById(int ID) {
 		
-	}
-
-	@Override
-	public void updateEmployee(Employee1 emp) {
-		entityManager.merge(emp);
-		
-	}
-
-	@Override
-	public Employee1 updateEmployeeByID(int ID) {
-		Employee1 emp = entityManager.find(Employee1.class, ID);
+		Employee emp=em.find(Employee.class, ID);
 		return emp;
-		
 	}
 
 	@Override
-	public void removeEmployee(Employee1 emp) {
-		entityManager.remove(emp);
-		
+	//to remove => remove(objname);
+	public void removeEmployee(Employee emp) {
+		em.remove(emp);		
 	}
 
 	@Override
+	//Transaction method to start and close the Entity manager
 	public void commitTransaction() {
-		entityManager.getTransaction().commit();
-		
+		em.getTransaction().commit();		
 	}
 
 	@Override
 	public void beginTransaction() {
-		entityManager.getTransaction().begin();
-		
+		em.getTransaction().begin();
 	}
+	
+
 }
