@@ -11,10 +11,10 @@ public class Client {
 		EmployeeService service=new EmployeeServiceImpl();
 		Employee emp=new Employee();
 		
-		/*//Create operation
-		emp.setID(103);
-		emp.setNAME("Vaibhav");
-		service.addEmployee(emp);*/
+		//Create operation
+		emp.setID(101);
+		emp.setNAME("Ishwar");
+		service.addEmployee(emp);
 		
 		/*//retreive a data
 		emp=service.getEmployeeById(103);
@@ -27,13 +27,13 @@ public class Client {
 		service.updateEmployee(emp);*/
 		
 		//retreive a data
-		emp=service.getEmployeeById(104);
+		/*//	emp=service.getEmployeeById(104);
 		System.out.println("Emp ID: "+emp.getID());
-		System.out.println("Emp NAME: "+emp.getNAME());
+		System.out.println("Emp NAME: "+emp.getNAME());*/
 	
 		//delete a data
-		emp=service.getEmployeeById(103);
-		service.removeEmployee(emp);
+		/*emp=service.getEmployeeById(103);
+		service.removeEmployee(emp);*/
 	
 	
 	}

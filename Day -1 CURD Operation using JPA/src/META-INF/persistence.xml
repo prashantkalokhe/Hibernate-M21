@@ -11,6 +11,8 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
   <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/employee" />
   <property name="javax.persistence.jdbc.user" value="root" />
   <property name="javax.persistence.jdbc.password" value="prashant@23" />
+ <property name="hibernate.hbm2ddl.auto" value="update"/>
+<!-- for auto create/update a table --> 
  
  </properties>
 </persistence-unit>
