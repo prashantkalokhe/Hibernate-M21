@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import com.cg.entities.Placement;
 import com.cg.service.IPlacementService;
-import com.cg.service.IPlacementServiceImpl;
+import com.cg.service.PlacementServiceImpl;
 
 public class client 
 {
@@ -15,7 +15,7 @@ public class client
 			//Providing input for Student table
 
 			Placement std=new Placement();
-			IPlacementService service = new IPlacementServiceImpl();
+			IPlacementService service = new PlacementServiceImpl();
 			
 			// creating DB
 			

@@ -4,14 +4,14 @@ import javax.persistence.EntityManager;
 
 import com.cg.entities.Placement;
 
-public class IPlacementRepositoryImpl implements IPlacementRepository 
+public class PlacementRepositoryImpl implements IPlacementRepository 
 {
 	@SuppressWarnings("unused")
 	private static final Placement placement=null;
 	//1: starting JPA lifecycle
 	private EntityManager em;
 	
-	public IPlacementRepositoryImpl() 
+	public PlacementRepositoryImpl() 
 		
 		{
 			//super();

@@ -11,7 +11,7 @@ public class JPAUtil
 	//Static block
 	static
 	{
-		factory=Persistence.createEntityManagerFactory("JPA-PU");
+		factory=Persistence.createEntityManagerFactory("JPAUtil");
 	}
 	//
 	public static EntityManager getEntityManager()

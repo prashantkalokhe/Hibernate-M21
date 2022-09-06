@@ -1,18 +1,18 @@
 package com.cg.service;
 
 import com.cg.Repository.IPlacementRepository;
-import com.cg.Repository.IPlacementRepositoryImpl;
+import com.cg.Repository.PlacementRepositoryImpl;
 import com.cg.entities.Placement;
 
-public class IPlacementServiceImpl implements IPlacementService {
+public class PlacementServiceImpl implements IPlacementService {
 							
 	//1 : Establishing connection between Service and Repository
 	
 	private IPlacementRepository dao;
 	
-	public IPlacementServiceImpl() {
+	public PlacementServiceImpl() {
 		
-		dao=new IPlacementRepositoryImpl();
+		dao=new PlacementRepositoryImpl();
 	}
 
 
